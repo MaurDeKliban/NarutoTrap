@@ -1,4 +1,4 @@
-package com.example.narutotrap.viewfragmen
+package com.example.narutotrap.narutoViewModel
 
 import androidx.fragment.app.Fragment
 
