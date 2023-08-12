@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 data class NarutoCharacters(
     val id: String,
     val name: String,
-    val images: String? = null,
+    val images: List<String>? = null,
     val debut: Debut? = null,
     val jutsu: List<String>? = null,
     val personal: Personal? = null,
@@ -21,7 +21,7 @@ data class Debut(
     val movie: String? = null,
     val ova: String? = null,
     val game: String? = null,
-    val appearsIn: String = "$manga, $anime, $movie, $novel, $ova, $game "
+    val appearsIn: String? = "$manga, $anime, $movie, $novel, $ova, $game"
 )
 
 @JsonClass(generateAdapter = true)

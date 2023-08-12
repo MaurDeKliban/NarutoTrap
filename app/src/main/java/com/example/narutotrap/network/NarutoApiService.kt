@@ -12,7 +12,7 @@ private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFact
     .baseUrl(BASE_URL).build()
 interface NarutoApiService {
     @GET("character")
-    suspend fun getAllСharacter(): List<AllCharacters>
+    suspend fun getAllСharacter(): AllCharacters
 }
 object NarutoApi {
     val retrofitService: NarutoApiService by lazy {

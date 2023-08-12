@@ -12,16 +12,19 @@ import kotlinx.coroutines.launch
 
 class NarutoViewModel : ViewModel() {
     private val _status = MutableLiveData<NarutoApiStatus>()
-    private val _characters = MutableLiveData<List<AllCharacters>>()
-    val characters: LiveData<List<AllCharacters>> = _characters
+    private val _characters = MutableLiveData<List<NarutoCharacters>>()
+    val characters: LiveData<List<NarutoCharacters>> = _characters
 
     enum class NarutoApiStatus { LOADING, ERROR, DONE }
+    init {
+        getCharacters()
+    }
 
     private fun getCharacters() {
         viewModelScope.launch {
             _status.value = NarutoApiStatus.LOADING
             try {
-                _characters.value = NarutoApi.retrofitService.getAllСharacter()
+                _characters.value = NarutoApi.retrofitService.getAllСharacter().characters
                 _status.value = NarutoApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = NarutoApiStatus.ERROR

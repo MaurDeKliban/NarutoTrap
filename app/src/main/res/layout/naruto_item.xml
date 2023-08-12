@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/naruto_image"
+        android:layout_width="170dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/naruto_name"
+        android:layout_width="170dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/naruto_image"
+        app:layout_constraintTop_toTopOf="@id/naruto_image" />
+
+    <TextView
+        android:id="@+id/popa"
+        android:layout_marginTop="15dp"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toEndOf="@id/naruto_name"
+        app:layout_constraintTop_toBottomOf="@id/naruto_name">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
